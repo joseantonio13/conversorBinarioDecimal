@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de binário para decimal</title>
+</head>
+<body>
+
+<style>
+
+*{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}
+
+</style>
+
+
+
+
+
+    <script>
+
+// Função para converter número binário para decimal
+function binarioParaDecimal(binario) {
+    return parseInt(binario, 2);
+}
+
+// Função para converter número decimal para binário
+function decimalParaBinario(decimal) {
+    return (decimal >>> 0).toString(2);
+}
+
+// Obter entrada do usuário e converter
+function converterBinarioParaDecimal() {
+    var binario = prompt("Digite um número binário:");
+    var decimal = binarioParaDecimal(binario);
+    document.write("O número decimal correspondente é: " + decimal);
+    document.write("<br>");
+}
+
+function converterDecimalParaBinario() {
+    var decimal = parseInt(prompt("Digite um número decimal:"));
+    var binario = decimalParaBinario(decimal);
+    document.write("O número binário correspondente é: " + binario);
+}
+
+// Chamando a função para conversão binário para decimal
+converterBinarioParaDecimal();
+
+// Chamando a função para conversão decimal para binário
+converterDecimalParaBinario();
+
+    </script>
+</body>
+</html>
